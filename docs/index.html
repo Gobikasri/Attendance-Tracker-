@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Attendance Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <header>
+      <h1>Smart Attendance Tracker</h1>
+      <p>Click a student's status to toggle attendance</p>
+    </header>
+    
+    <div id="dashboard-container" class="dashboard"></div>
+    
+    <div class="list-container">
+      <div class="add-form">
+  <input
+    type="text"
+    id="student-name"
+    placeholder="Student Name"
+  />
+
+  <input
+    type="text"
+    id="roll-no"
+    placeholder="Roll Number"
+  />
+
+  <button onclick="createStudent()">
+    Add Student
+  </button>
+</div>
+      <h2>Student Roster</h2>
+      <div id="student-list-container" class="student-list"></div>
+    </div>
+  </div>
+
+<script src="api.js"></script>
+<script src="dashboard.js"></script>
+<script src="studentList.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
