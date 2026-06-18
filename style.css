@@ -1,0 +1,176 @@
+:root {
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --primary: #3b82f6;
+  --success: #10b981;
+  --danger: #ef4444;
+  --border: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--text-main);
+}
+
+header p {
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+/* Dashboard Cards */
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+.card .count {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0 0;
+}
+
+.present-card .count { color: var(--success); }
+.absent-card .count { color: var(--danger); }
+
+/* Roster Wrapper */
+.list-container {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.list-container h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.student-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.student-row:hover {
+  background-color: #f1f5f9;
+}
+
+.student-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.roll-no {
+  font-weight: 600;
+  color: #64748b;
+}
+
+.student-name {
+  font-weight: 500;
+}
+
+/* Action Button */
+.status-btn {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.2s;
+  min-width: 90px;
+}
+
+.status-btn:active {
+  transform: scale(0.95);
+}
+
+.btn-present {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.btn-absent {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.add-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.add-form button {
+  padding: 10px 16px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  margin-left: 8px;
+  padding: 8px 12px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
