@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:5000/students";
+const API_URL =
+"https://attendance-tracker-limb.onrender.com/students";
 
 async function fetchStudents() {
   const response = await fetch(API_URL);
