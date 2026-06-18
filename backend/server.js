@@ -21,10 +21,12 @@ let students = [
   }
 ];
 
+// Get all students
 app.get("/students", (req, res) => {
   res.json(students);
 });
 
+// Add student
 app.post("/students", (req, res) => {
   const newStudent = {
     id: Date.now(),
@@ -36,6 +38,7 @@ app.post("/students", (req, res) => {
   res.json(newStudent);
 });
 
+// Toggle attendance
 app.put("/students/:id", (req, res) => {
   const id = Number(req.params.id);
 
@@ -58,6 +61,7 @@ app.put("/students/:id", (req, res) => {
   });
 });
 
+// Delete student
 app.delete("/students/:id", (req, res) => {
   const id = Number(req.params.id);
 
@@ -65,12 +69,19 @@ app.delete("/students/:id", (req, res) => {
     student => student.id !== id
   );
 
+  res.json({
+    message: "Deleted"
+  });
+});
+
+// Home Route
+app.get("/", (req, res) => {
+  res.send("Student Attendance Tracker Backend Running");
+});
+
+// Render-compatible port
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-});
-
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
 });
